@@ -1,0 +1,98 @@
+header {
+    /* Set the background color to dark blue */
+    background-color: #0B1C51;
+    /* Add some pixels of space to separate the Title from the 
+    naviagtion links */
+    margin-bottom: 50px;
+}
+
+header h1 {
+    /* Set title font size */
+    color: #fff;
+    /* Set title font size */
+    font-size: 52px;
+    /* Center the text. */
+    text-align: center;
+    /* remove default margin and spacing around the h1 element */
+    margin: 0;
+    /* push the text down from the top of the page */
+    padding-top: 25px;
+
+}
+
+header nav {
+    /*change the display property from default to flex. */
+    display: flex;
+    /* center the element defined as 'display: flex'. */
+    justify-content: center;
+}
+
+/*Style the unordered list */
+header nav ul {
+    /*change the display property from its default to flex. */
+    display: flex;
+    /* 'display: flex' sets its default value of a single row for the nav items */
+    /* remove the default padding to the left of the unordered list */
+    padding-left: 0;
+    /* let's remove the bullet points */
+    list-style: none;
+}
+
+/* let's style the anchor tags of the list items */
+header nav ul li a {
+    /* make the link colors white */
+    color: #fff;
+    /* change font to 'monserrat' */
+    font-family: 'Montserrat', sans-serif;
+    /* remove underlines from the link */
+    text-decoration: none;
+    /* apply margin space to the right of each link to make a gap */
+    margin: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+    /*removes the margin to the right of the last anchor tag
+    so that the nav appears centered */
+    margin-right: 0;
+}
+
+/* Next, we have add the media query for desktop viewing */
+/* When a web-browser is larger than 600 pixels, apply these rules */
+@media all and (min-width: 600px) {
+    header {
+        /* change the default settings from 'block' to 'flex' */
+        display: flex;
+        /* Pushes the items (the title and nav) to the far sides of the 
+       browser with space between them. */
+       justify-content: space-between;
+       /* Adds 0 pixels padding top and bottom, and 30 pixels padding 
+       left and right. */
+       padding: 0 30px;
+    }
+
+    header h1 {
+        /*change the font size for desktop viewing, as instructed*/
+        font-size: 48px;
+        /* Sets 14 pixels of margin above and below the `h1` and sets 
+        0 pixels of margin to the left and right. */
+        margin: 14px 0;
+        /* Removes or sets 0 pixels of padding above the `h1`. */
+        padding-top: 0;
+    }
+
+    header nav {
+        /*
+          Pushes the navigation container down by 8 pixels to make it
+          present a little better visually within the space.
+        */
+        margin-top: 20px;
+      }
+      
+      /* Users cannot hover on mobile devices, so that is why you
+         implement this behavior only for larger screens. */
+      header nav ul li a:hover {
+        /* Targets the change when a user holds the pointer over the anchor tag 
+           (link) within the list items within the unordered list that 
+           is within the navigation that is within the header. */
+        color: #bdbdbd;
+}
